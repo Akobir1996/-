@@ -35,6 +35,7 @@ function startGame() {
     createRandomCircle()
     setTime(time)
     setcolor()
+    score = 0
 }
 
 function decreaseTime(){
@@ -58,6 +59,7 @@ function finishGame(){
     board.innerHTML = `<h1>Cчет: <span class="primary">${score}</span></h1>`
     board.querySelector("h1").addEventListener("click", () =>     {
         screens[1].classList.remove("up")
+        return startGame()
      })
 }
 
