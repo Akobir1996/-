@@ -56,6 +56,9 @@ function setTime(value){
 function finishGame(){
     timeEl.parentNode.classList.add('hide')
     board.innerHTML = `<h1>Cчет: <span class="primary">${score}</span></h1>`
+    board.querySelector("h1").addEventListener("click", () =>     {
+        screens[1].classList.remove("up")
+     })
 }
 
 function createRandomCircle(){
