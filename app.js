@@ -7,6 +7,7 @@ const colors = ['#CA2C92','#7851A9','#4169E1','#442D25','#FDD5B1','#CD5700','#76
 let time = 0
 let score = 0
 
+
 startBtn.addEventListener('click',(event) => {
         event.preventDefault()
         screens[0].classList.add('up')
@@ -34,8 +35,6 @@ function startGame() {
     setInterval(decreaseTime, 1000)
     createRandomCircle()
     setTime(time)
-    setcolor()
-    score = 0
 }
 
 function decreaseTime(){
@@ -57,10 +56,7 @@ function setTime(value){
 function finishGame(){
     timeEl.parentNode.classList.add('hide')
     board.innerHTML = `<h1>Cчет: <span class="primary">${score}</span></h1>`
-    board.querySelector("h1").addEventListener("click", () =>     {
-        screens[1].classList.remove("up")
-        return startGame()
-     })
+    
 }
 
 function createRandomCircle(){
