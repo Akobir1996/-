@@ -20,6 +20,8 @@ a {
 
 a:hover {
   color: #16d9e3;
+  font-size: 2em;
+  transition: .3s;
 }
 
 .start {
@@ -52,6 +54,7 @@ h1 {
   justify-content: center;
   list-style: none;
   padding: 0;
+  position: relative;
 }
 
 .time-list li {
@@ -59,6 +62,8 @@ h1 {
 }
 
 .time-btn {
+  position: relative;
+  top: 50px;
   background-color: transparent;
   border: 2px solid #c0c0c0;
   color: #fff;
@@ -66,11 +71,15 @@ h1 {
   font-family: inherit;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
+  border-radius: 8px;
 }
 
 .time-btn:hover {
   border: 2px solid #16d9e3;
   color: #16d9e3;
+  top: 47px;
+  transition: .8s;
+  opacity: .75;
 }
 
 .hide {
@@ -86,10 +95,10 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
-  box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  box-shadow: -8px -8px 20px #7b8b9c, 10px 7px 20px #80a0c2;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -99,4 +108,11 @@ h1 {
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .board{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(118.38deg, #44576d -4.6%, #282d33 200.44%);
+  }
 }
